@@ -1,0 +1,23 @@
+sudo: false
+language: php
+
+php:
+  - 5.5
+  - 5.6
+  - 7.0
+  - hhvm
+
+matrix:
+  allow_failures:
+    - php: hhvm
+  fast_finish: true
+
+before_script:
+  - composer config -g github-oauth.github.com $GITHUB_COMPOSER_AUTH
+  - composer install
+
+script: ./benchmark.php
+
+env:
+  global:
+    secure: WlJqd0v1GrwCTlQQ5Bb8xk0qDVuagIDtciWl6+Ewdps41Pdnns+Trdg/6doyujn05aAxFMffW9VquejUtB1c3tghxxvPO2/6g/kKFYjsczXGwe5LgqJxtkwfW1KRl3K3U3koblZ76nTZ3ENZogCNOhY41MBXRD5SnMMCk8IeIsB3g4M5qRypkA4zi7/fgFF8L78gzhR99isiOSXqJGjYi/LuQGz535paOgoQprpp3Rfed9P8uiXpSvK8OFCTK7Td9DH94uk7LSyLvNwUDd8acxQU5F09nEKlnrdEfDEzs5KQi1MvGQ3+kr+gqlq+EVMCEirwTfOAqfJbQv+oyT4Z3CffyohKUoO8RIYV5uLf+J8VC02qd1afYaA7eBfHjsi4eVO1Y/91RgDRnHYbVKYClKXszPRJT8v+/26VDPNxdXQCVPRirjpASzwUrP9d0/SmYod9xohjGRtvMVGgfb2ymDuWIcWn6BFPaWrnftsTsjmpTFNAyWl6aUcfeO7Nq1AJdRY/IF2FMB0BG4kn0Woft3gSpXrY2AkI28CjMTp0DHr5WAZeE5xFznfZz6w3dcPU+N0q+E2ukLIVDcDGdfF/GOV2neS2xZ+JkMdZ15uVRjQUplZHQLwDIh+PHV39mnKw/PobKHscEJUFFBsTm26WJywxUqiC2mESusoZ20gg1A4=
