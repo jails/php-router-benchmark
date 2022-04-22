@@ -4,6 +4,10 @@
 
 The intent here is to benchmark and also inventory all popular PHP routing solutions around.
 
+## Requirements
+
+php = 7.3
+
 ## Installation
 
 Clone the repo then:
@@ -19,12 +23,12 @@ The current test creates 100 unique routes with 3 variables placeholder each.
 
 Example of route: `/controller1/action1/{id}/{arg1}/{arg2}`
 
-This benchmarking will be runned on the following three different situations for both path & subdomain:
+This benchmarking will be run on the following three different situations for both path & subdomain:
 * the best case (i.e when a request matches the first route for all differents HTTP method)
 * the worst case (i.e when a request matches the last route for all differents HTTP method)
 * the average case (i.e the mean which is probably the most realistic test).
 
-And all tests will be runned using the following sets of routes:
+And all tests will be run using the following sets of routes:
 * in the first set all routes matches all HTTP methods.
 * in the second set all routes matches only a single HTTP method.
 
@@ -33,7 +37,7 @@ The benchmarked routing implementations are:
 * [Router](https://github.com/crysalead/router)
 * [Li3](https://github.com/UnionOfRAD/lithium)
 * [FastRoute](https://github.com/nikic/FastRoute)
-* [FastRoute*](https://github.com/jails/FastRoute) = FastRoute + [a classic routing strategy](https://github.com/jails/FastRoute/commit/114676515b636b637f6cac53945c2e04875b60eb)
+* [FastRoute\*](https://github.com/jails/FastRoute) = FastRoute + [a classic routing strategy](https://github.com/jails/FastRoute/commit/114676515b636b637f6cac53945c2e04875b60eb)
 * [Symfony](https://github.com/symfony/routing)
 * [Aura3](https://github.com/auraphp/Aura.Router)
 * [PHRoute](https://github.com/mrjgreen/phroute)
