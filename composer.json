@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": ">=7.3",
+        "php": ">=7.3 <7.4",
         "crysalead/router": "~3.0",
         "nikic/fast-route": "dev-master",
         "illuminate/routing": "~5.7",
